@@ -3,6 +3,8 @@ package com.leondesilva.devopsassignment.productsservice.controllers;
 
 
 import com.leondesilva.devopsassignment.productsservice.ProductsServiceApplication;
+import org.junit.experimental.categories.Category;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +23,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 /**
  * Integration test for product controller.
  */
+@Tag("IntegrationTest")
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.MOCK, classes = ProductsServiceApplication.class)
 @AutoConfigureMockMvc

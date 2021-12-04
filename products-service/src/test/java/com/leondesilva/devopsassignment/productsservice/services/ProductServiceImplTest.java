@@ -3,7 +3,9 @@ package com.leondesilva.devopsassignment.productsservice.services;
 
 import com.leondesilva.devopsassignment.productsservice.models.ProductModel;
 import com.leondesilva.devopsassignment.productsservice.repositories.ProductRepository;
+import org.junit.experimental.categories.Category;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.springframework.test.util.ReflectionTestUtils;
 
@@ -13,6 +15,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
+@Tag("UnitTest")
 class ProductServiceImplTest {
     private ProductService productService;
     private ProductRepository productRepository;

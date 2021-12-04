@@ -15,11 +15,15 @@
 //import org.springframework.test.context.ContextConfiguration;
 //import org.springframework.test.context.junit4.SpringRunner;
 //import org.testcontainers.containers.PostgreSQLContainer;
+//import com.leondesilva.devopsassignment.productsservice.IntegrationTests;
+//import org.junit.experimental.categories.Category;
+//import org.junit.jupiter.api.Tag;
 //
 ///**
 // * Test class for product service integration
 // */
 //@Disabled
+//@Tag("IntegrationTest")
 //@RunWith(SpringRunner.class)
 //@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 //@ContextConfiguration(initializers = {ProductServiceImplIntegrationTest.Initializer.class})
