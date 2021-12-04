@@ -11,7 +11,7 @@ pipeline {
             steps {
                 sh 'mvn test -PUnitTests'
             }
-        },
+        }
         stage('IntegrationTests') {
             steps {
                 sh 'mvn test -PIntegrationTests'
