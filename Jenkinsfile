@@ -4,22 +4,22 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'mvn clean compile'
+                sh 'cd products-service && mvnw clean compile'
             }
         }
         stage('UnitTests') {
             steps {
-                sh 'mvn test -PUnitTests'
+                sh 'cd products-service && mvnw test -PUnitTests'
             }
         }
         stage('IntegrationTests') {
             steps {
-                sh 'mvn test -PIntegrationTests'
+                sh 'cd products-service && mvnw test -PIntegrationTests'
             }
         }
         stage('Package') {
             steps {
-                sh 'mvn package'
+                sh 'cd products-service && mvnw package'
             }
         }
     }
