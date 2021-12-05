@@ -26,13 +26,17 @@ pipeline {
             steps {
                 sh "chmod +x -R ${env.WORKSPACE}"
                 sh 'cd products-service && ./mvnw package'
+                zip zipFile: 'artifact.zip', archive: false, dir: 'products-service'
+                archiveArtifacts artifacts: 'test.zip', fingerprint: true
             }
         }
         stage('Dockerize') {
             steps {
                 node('docker-agent') {
                     script {
-                        dockerImage = docker.build('leondesilva/product-service:v1', '-f DockerFile .')
+                        dockerImage = docker.build('leondesilva/product-service:v1', '-f products-service/DockerFile .')
+                        copyArtifacts filter: 'artifact.zip', fingerprintArtifacts: true, projectName: '${JOB_NAME}', selector: specific('${BUILD_NUMBER}')
+                                        unzip zipFile: 'artifact.zip', dir: './products-service'
                         docker.withRegistry('', DockerHubCredentials)
                             dockerImage.push("v2")
                     }
