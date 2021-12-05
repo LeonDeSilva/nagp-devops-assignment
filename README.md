@@ -2,6 +2,8 @@
 
 ## TASK 2 - Docker container creation
 
+###Link to the [DockerFile](https://github.com/LeonDeSilva/nagp-devops-assignment/blob/docker/products-service/DockerFile)
+
 ### Step 1 - Postgres Container
 
 Pull Docker Image from docker hub
