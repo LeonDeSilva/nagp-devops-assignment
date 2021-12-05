@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        DockerHubCredentials = DockerHubCredentials
+        DockerHubCredentials = 'DockerHubCredentials'
     }
 
     triggers {
