@@ -1,8 +1,13 @@
 pipeline {
     agent any
+    environment {
+        DockerHubCredentials = DockerHubCredentials
+    }
+
     triggers {
         pollSCM('*/1 * * * *')
     }
+
     stages {
         stage('Build') {
             steps {
