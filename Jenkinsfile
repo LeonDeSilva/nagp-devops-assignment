@@ -31,7 +31,11 @@ pipeline {
         stage('Dockerize') {
             steps {
                 node('docker-agent') {
-                     sh "echo Hello"
+                    script {
+                        dockerImage = docker.build('leondesilva/product-service:v1')
+                        docker.withRegistry('', DockerHubCredentials)
+                            dockerImage.push("v2")
+                    }
                 }
             }
         }
