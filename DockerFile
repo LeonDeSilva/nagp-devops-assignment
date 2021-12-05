@@ -2,5 +2,5 @@ FROM amazoncorretto:8u312-alpine3.15
 
 COPY ./products-service/target/products-service-0.0.1-SNAPSHOT.jar ./var/lib/products-service.jar
 
-ENTRYPOINT ["java", "-jar", "/var/lib/products-service.jar", "DockerFile"]
+ENTRYPOINT ["java", "-jar", "/var/lib/products-service.jar", "-f DockerFile"]
 
