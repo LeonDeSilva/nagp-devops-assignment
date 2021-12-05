@@ -40,8 +40,9 @@ pipeline {
                     script {
                         unstash 'products-service'
                         dockerImage = docker.build('leondesilva/product-service:v1', '-f products-service/DockerFile .')
-                        docker.withRegistry('', DockerHubCredentials)
+                        docker.withRegistry('', DockerHubCredentials) {
                             dockerImage.push("v2")
+                        }
                     }
                 }
             }
