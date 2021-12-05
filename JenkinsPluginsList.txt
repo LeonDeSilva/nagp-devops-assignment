@@ -1,0 +1,49 @@
+Javadoc
+Maven Integration
+JavaScript GUI Lib: jQuery bundles (jQuery and jQuery UI)
+WMI Windows Agents
+MapDB API	
+Subversion
+External Monitor Job Type
+jQuery	
+Config File Provider
+Variant
+HTML Publisher
+Pipeline: Declarative Agent API
+Run Condition
+Conditional BuildStep
+Parameterized Trigger
+Handy Uri Templates 2.x API
+Role-based Authorization Strategy
+Favorite
+Pub-Sub "light" Bus	
+Common API for Blue Ocean
+REST API for Blue Ocean	
+Design Language
+Bitbucket Branch Source
+Web for Blue Ocean
+JWT for Blue Ocean
+Blue Ocean Core JS	
+Pipeline SCM API for Blue Ocean
+REST Implementation for Blue Ocean	
+Infrastructure plugin for Publish Over X
+Pipeline implementation for Blue Ocean
+Server Sent Events (SSE) Gateway
+Publish Over SSH
+Git Pipeline for Blue Ocean
+Dashboard for Blue Ocean	
+GitHub Pipeline for Blue Ocean
+i18n for Blue Ocean
+Mercurial
+Display URL for Blue Ocean
+Personalization for Blue Ocean
+Config API for Blue Ocean
+Autofavorite for Blue Ocean
+Blue Ocean Pipeline Editor
+Bitbucket Pipeline for Blue Ocean
+Events API for Blue Ocean
+Blue Ocean	
+Environment Injector
+EnvInject API
+SSH Agent
+Localization Support
