@@ -28,5 +28,12 @@ pipeline {
                 sh 'cd products-service && ./mvnw package'
             }
         }
+        stage('Dockerize') {
+            steps {
+                node('docker-agent') {
+                     sh "echo Hello"
+                }
+            }
+        }
     }
 }
