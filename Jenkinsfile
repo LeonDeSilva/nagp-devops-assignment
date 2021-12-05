@@ -32,7 +32,7 @@ pipeline {
             steps {
                 node('docker-agent') {
                     script {
-                        dockerImage = docker.build('leondesilva/product-service:v1')
+                        dockerImage = docker.build('leondesilva/product-service:v1', '-f DockerFile')
                         docker.withRegistry('', DockerHubCredentials)
                             dockerImage.push("v2")
                     }
